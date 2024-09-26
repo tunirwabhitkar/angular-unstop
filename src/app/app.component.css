@@ -1,0 +1,40 @@
+.container {
+  text-align: center;
+}
+
+.seat-grid {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.seat.available {
+  background-color: green;
+  color: white;
+}
+
+.seat.booked {
+  background-color: red;
+  color: white;
+}
+
+.booking-panel {
+  margin-top: 20px;
+}
+
+button {
+  margin-left: 10px;
+}

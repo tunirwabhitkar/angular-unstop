@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Train Seat Booking</h1>
+
+  <div class="seat-grid">
+    <div *ngFor="let row of seatGrid; let rowIndex = index" class="row">
+      <div
+        *ngFor="let seat of row; let seatIndex = index"
+        [class]="getSeatClass(seat)"
+      >
+        {{ seat.id }}
+      </div>
+    </div>
+  </div>
+
+  <div class="booking-panel">
+    <label for="seatsToBook">Number of seats to book:</label>
+    <input
+      type="number"
+      id="seatsToBook"
+      [(ngModel)]="seatsToBook"
+      min="1"
+      max="7"
+    />
+    <button (click)="bookSeats()">Book Seats</button>
+  </div>
+
+  <div *ngIf="bookedSeats.length > 0">
+    <h3>Seats booked for you:</h3>
+    <p>{{ bookedSeats.join(', ') }}</p>
+  </div>
+</div>
